@@ -1,8 +1,8 @@
 package edu.unimagdalena.pw.myapi.entidades;
 
-import java.util.ArrayList;
+
 import java.util.Set;
-import java.util.HashSet;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +17,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -43,7 +42,7 @@ public class Course {
     @JoinTable(name="COURSES_STUDENTS", 
     joinColumns=@JoinColumn(name="course_id", referencedColumnName="id" ),
     inverseJoinColumns=@JoinColumn(name="student_id", referencedColumnName="id"))
-    private Set<Student> students = new HashSet();
+    private Set<Student> students;
     
     @OneToOne(mappedBy = "course")
     private CourseMaterial courseMaterial;
