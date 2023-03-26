@@ -3,8 +3,9 @@ package edu.unimagdalena.pw.myapi.api.dto;
 import lombok.Data;
 
 @Data
-public class CourseDto {
+public class CourseCreationDto {
+    private Long id;
     private String name;
 
-
+    
 }
