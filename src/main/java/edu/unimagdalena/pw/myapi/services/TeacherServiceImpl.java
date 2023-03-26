@@ -3,7 +3,7 @@ package edu.unimagdalena.pw.myapi.services;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import edu.unimagdalena.pw.myapi.entidades.Teacher;
@@ -14,7 +14,7 @@ public class TeacherServiceImpl implements TeacherService{
     
     private final TeacherRepository teacherRepository;    
     
-    @Autowired 
+     
     public TeacherServiceImpl(TeacherRepository teacherRepository) {
         this.teacherRepository = teacherRepository;
     }
