@@ -2,7 +2,6 @@ package edu.unimagdalena.pw.myapi.exceptions;
 
 import java.time.LocalDateTime;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

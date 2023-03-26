@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import edu.unimagdalena.pw.myapi.services.TeacherService;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.net.URI;
 
@@ -82,7 +81,7 @@ public class TeacherController {
         return teacherService.update(id, teacherToUpdate)        
             .map(teacherUpdated -> ResponseEntity.ok().body(teacherMapper.toTeacherCreationDto(teacherToUpdate)))
             .orElseGet(()->{
-                Teacher teacherCreated = teacherService.create(teacherToUpdate);
+                
                 TeacherCreationDto teacherCreationDto = teacherMapper.toTeacherCreationDto(teacherToUpdate);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                         .path("/{id}")
